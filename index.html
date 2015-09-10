@@ -1,73 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Tic Tac Toe MoFo</title>
+	<head>
+		<title>Tic Tac Toe MoFo</title>
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="bootstrap.min.css">
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="bootstrap-theme.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<!-- 	// <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<!-- 		// <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->	
+		<script src="jquery-2.1.4.js"></script>
 
-<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
 
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="bootstrap.min.css">
+	<!-- TIC TAC TOE GAME SECTION BELOW -->
 
-<!-- Optional theme -->
-	<link rel="stylesheet" href="bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
-<!-- TIC TAC TOE GAME SECTION BELOW -->
-<div class="container game">
+	<!-- MAKE THE DIVS CLICKABLE, MAYBE TURN THEM INTO VARIABLES? THIS SECTION SHOULD BE HANDLED BY LOOPS -->
+		<div class="container fourSections" id="topLeft">
 		    <div class="row">
-			     <div class="col-xs-4">1</div>
-			     <div class="col-xs-4">2</div>
-			     <div class="col-xs-4">3</div>
+			     <div class="col-xs-4 button" name="a1">T</div>
+			     <div class="col-xs-4 button" name="a2">I</div>
+			     <div class="col-xs-4 button" name="a3">C</div>
 			</div>
 		    <div class="row">
-			     <div class="col-xs-4">4</div>
-			     <div class="col-xs-4">5</div>
-			     <div class="col-xs-4">6</div>
+			     <div class="col-xs-4 button" name="b1">T</div>
+			     <div class="col-xs-4 button" name="b2">A</div>
+			     <div class="col-xs-4 button" name="b3">C</div>
 		    </div>
 		    <div class="row">
-			     <div class="col-xs-4">7</div>
-			     <div class="col-xs-4">8</div>
-			     <div class="col-xs-4">9</div>
+			     <div class="col-xs-4 button" name="c1">T</div>
+			     <div class="col-xs-4 button" name="c2">0</div>
+			     <div class="col-xs-4 button" name="c3">E</div>
 		    </div>
-</div>
-
-<!-- 		<div class="row">	
-		  <div class="col-md-1">.col-md-1</div>
-		  <div class="col-md-1">.col-md-2</div>
-		  <div class="col-md-1">.col-md-3</div>
-		  <div class="col-md-1">.col-md-4</div>
-		  <div class="col-md-1">.col-md-5</div>
-		  <div class="col-md-1">.col-md-6</div>
-		  <div class="col-md-1">.col-md-7</div>
-		  <div class="col-md-1">.col-md-8</div>
-		  <div class="col-md-1">.col-md-9</div>
-		  <div class="col-md-1">.col-md-10</div>
-		  <div class="col-md-1">.col-md-11</div>
-		  <div class="col-md-1">.col-md-12</div>
 		</div>
 
-		<div class="row">
-		  <div class="col-md-8">.col-md-8</div>
-		  <div class="col-md-4">.col-md-4</div>
-		</div>
+	<!-- CREATE VARIABLES THAT SAY PLAYER ONE IS X AND PLAYER TWO IS O -->
 
-		<div class="row">
-		  <div class="col-md-4">.col-md-4</div>
-		  <div class="col-md-4">.col-md-4</div>
-		  <div class="col-md-4">.col-md-4</div>
-		</div>
+	<!-- MAKE A FUNCTION THAT ALTERNATES PLAYERS EVERY TIME ONE OF THE GAME DIVS IS CLICKED -->
+		<!-- MAKE A FUNCTION TH -->
 
-		<div class="row">
-		  <div class="col-md-6">.col-md-6</div>
-		  <div class="col-md-6">.col-md-6</div>
-		</div> -->
-
-</body>
+		<script src="main.js"></script>
+	</body>
 </html>
