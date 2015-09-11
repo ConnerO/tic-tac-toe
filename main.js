@@ -1,3 +1,5 @@
+var turnCounter = 0;
+
 $(document).ready(function(){
 
 
@@ -8,17 +10,20 @@ $(document).ready(function(){
 
 
 
-	var turnCounter = 0;
+
 
 
 	$(".button").click(function(){
 		if ($(this).hasClass("deny")) {
 			return;
 		}
+		
 		if (turnCounter %2 === 0) {
 			$(this).text("X");
 			$(this).addClass("deny");
-		} else {
+		} 
+
+		else {
 			$(this).text("O");
 			$(this).addClass("deny");
 		}
@@ -26,8 +31,15 @@ $(document).ready(function(){
 		turnCounter++;
 
 		getWinner();
+	});
+	
+	$(".reset").click(function(){
+		turnCounter=0;
 
-});
+		$(".button").text("").removeClass("deny");
+
+
+	});
 
 	function getWinner(){
 		var a = $(".a").text();
@@ -128,6 +140,8 @@ $(document).ready(function(){
 		}
 
 	}
+
+
 
 // 		function cellValue(key) {
 // 		switch(key) {
