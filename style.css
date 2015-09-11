@@ -9,6 +9,10 @@ div.container {
 
 p {
 	font-weight: bold;
+/*	max-width: 100%;*/
+/*	display: border-box;*/
+	font-size: 2.5em;
+	text-align: center;
 }
 
 
@@ -35,10 +39,11 @@ p {
 }
 
 .middlebuttons {
-	font-size: 1em;
+	font-size: 1.5em;
 	margin:2% 0;
 	vertical-align: middle;
 	text-shadow: 6px 6px 5px #888888;
+	text-align: center;
 }
 
 .deny, .scoreboard {
@@ -101,4 +106,22 @@ button {
 
 .redbackground3 { 
 	background-image: -webkit-linear-gradient(left, #990000, #660000);
+}
+
+.hidden {
+    display: none;
+}
+
+#playerX {
+	color: #0044cc;
+	text-shadow: 2px 2px 3px #888888;
+}
+
+#playerO {
+	color: #339999;
+	text-shadow: 2px 2px 3px #888888;
+}
+
+#turntext {
+	color:-webkit-linear-gradient(left, #0044cc, #339999);
 }

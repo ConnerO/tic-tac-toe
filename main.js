@@ -3,6 +3,10 @@ var xscore = 0;
 var oscore = 0;
 var tiescore = 0;
 
+function specialButton() {
+	var special = alert("You're good enough. You're smart enough. And gosh darn it, people like you.")
+}
+
 function resetButtons() {
 	$(".button").text("").removeClass("deny").removeClass("bluebackground").removeClass("greenbackground");
 	turnCounter =0;
@@ -16,6 +20,8 @@ function resetScore() {
 }
 
 $(document).ready(function(){
+
+	$("#playerO").addClass("hidden");
 
 
 // use an if statement for the turn numbers.
@@ -32,12 +38,16 @@ $(document).ready(function(){
 			$(this).text("X");
 			$(this).addClass("deny");
 			$(this).toggleClass("bluebackground");
+			$("#playerX").addClass("hidden");
+			$("#playerO").removeClass("hidden");
 		} 
 
 		else {
 			$(this).text("O");
 			$(this).addClass("deny");
 			$(this).toggleClass("greenbackground");
+			$("#playerO").addClass("hidden");
+			$("#playerX").removeClass("hidden");
 		}
 
 		turnCounter++;
@@ -53,7 +63,7 @@ $(document).ready(function(){
 
 // SPECIAL BUTTON
 
-	$(".special").click();
+	$(".special").click(specialButton);
 
 	// $(".button").click(function(){
 		
@@ -367,6 +377,5 @@ $(document).ready(function(){
 	// }
 
 //If top left cell equals top middle cell and top right cell, then
-
 
 });

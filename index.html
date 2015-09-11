@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Tic Tac Toe Mo Fo</title>
+		<title>TicTacToeMoFo</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="normalize.css">
 	<!-- Latest compiled and minified CSS -->
@@ -17,9 +17,15 @@
 	</head>
 	<body>
 		<header>
-		    <div class="row">
-			     <div class="col-xs-12"><p>Tic Tac Toe Mo Fo</p></div>
-			</div>
+		    <section class="container">
+			    <section class="row">
+				     <section class="col-xs-4"><p id="playerX">Player X</p></section>
+
+				     <section class="col-xs-4"><p id="turntext">Turn</p></section>
+
+				     <section class="col-xs-4"><p id="playerO">Player O</p></section>
+				</section>
+			</section>
 		</header>
 	<!-- TIC TAC TOE GAME SECTION BELOW -->
 		<div class="container topcontainerborder">
@@ -41,21 +47,21 @@
 		</div>
 
 <!-- MIDDLE BUTTONS -->
-		<div class="container">
-		    <div class="row">
-			     <div class="col-xs-4 reset middlebuttons">
+		<section class="container">
+		    <section class="row">
+			     <section class="col-xs-4 reset middlebuttons">
 			     	<button type="button"><b>Game</b></button>
-			     </div>
+			     </section>
 
-			     <div class="col-xs-4 special middlebuttons">
+			     <section class="col-xs-4 special middlebuttons">
 			     	<button type="button">Special</button>
-			     </div>
+			     </section>
 
-			     <div class="col-xs-4 resetscore middlebuttons">
+			     <section class="col-xs-4 resetscore middlebuttons">
 			     	<button type="button"><b>Score</b></button>
-			     </div>
-			</div>
-		</div>
+			     </section>
+			</section>
+		</section>
 
 <!-- SCOREBOARD -->
 		<div class="container bottomcontainerborder">
@@ -83,9 +89,9 @@
 
 		<script src="main.js"></script>
 		<footer>
-		    <div class="row">
-			     <div class="col-xs-12"><p>Fo Mo Toe Tac Tic</p></div>
-			</div>
+		    <section class="row">
+			     <section class="col-xs-12"><p>ToeTacTic</p></section>
+			</section>
 		</footer>
 	</body>
 </html>
