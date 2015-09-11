@@ -42,67 +42,90 @@ $(document).ready(function(){
 
 // TOP ROW X WINS
 		if (a === "X" && b === "X" && c ==="X") {
-			alert("X won! top row")
+			alert("X won! top row");
 		}
 
 // MIDDLE ROX X WINS
-		if (d === "X" && e === "X" && f ==="X") {
-			alert("X won! middle row")
+		else if (d === "X" && e === "X" && f ==="X") {
+			alert("X won! middle row");
 		}
 
 // BOTTOM ROW X WINS
-		if (g === "X" && h === "X" && i ==="X") {
-			alert("X won! bottom row")
+		else if (g === "X" && h === "X" && i ==="X") {
+			alert("X won! bottom row");
 		}
 
 // LEFT COLUMN X WINS
-		if (a === "X" && d === "X" && g ==="X") {
-			alert("X won! left column")
+		else if (a === "X" && d === "X" && g ==="X") {
+			alert("X won! left column");
 		}
 
 // MIDDLE COLUMN X WINS
-		if (b === "X" && e === "X" && h ==="X") {
-			alert("X won! middle column")
+		else if (b === "X" && e === "X" && h ==="X") {
+			alert("X won! middle column");
 		}
 
 // RIGHT COLUMN X WINS
-		if (c === "X" && f === "X" && i ==="X") {
-			alert("X won! right column")
+		else if (c === "X" && f === "X" && i ==="X") {
+			alert("X won! right column");
 		}
 
 
 
 
 // TOP ROW O WINS
-		if (a === "O" && b === "O" && c ==="O") {
-			alert("O won! top row")
+		else if (a === "O" && b === "O" && c ==="O") {
+			alert("O won! top row");
 		}
 
 // MIDDLE ROX O WINS
-		if (d === "O" && e === "O" && f ==="O") {
-			alert("O won! middle row")
+		else if (d === "O" && e === "O" && f ==="O") {
+			alert("O won! middle row");
 		}
 
 // BOTTOM ROW O WINS
-		if (g === "O" && h === "O" && i ==="O") {
-			alert("O won! bottom row")
+		else if (g === "O" && h === "O" && i ==="O") {
+			alert("O won! bottom row");
 		}
 
 // LEFT COLUMN O WINS
-		if (a === "O" && d === "O" && g ==="O") {
-			alert("O won! left column")
+		else if (a === "O" && d === "O" && g ==="O") {
+			alert("O won! left column");
 		}
 
 // MIDDLE COLUMN O WINS
-		if (b === "O" && e === "O" && h ==="O") {
-			alert("O won! middle column")
+		else if (b === "O" && e === "O" && h ==="O") {
+			alert("O won! middle column");
 		}
 
 // RIGHT COLUMN O WINS
-		if (c === "O" && f === "O" && i ==="O") {
-			alert("O won! right column")
+		else if (c === "O" && f === "O" && i ==="O") {
+			alert("O won! right column");
 		}
 
+// DIAGONAL X LEFT DOWN
+		else if (a === "X" && e === "X" && i ==="X") {
+			alert("X won!");
+		}
+
+// DIAGONAL X UP RIGHT
+		else if (g === "X" && e === "X" && c ==="X") {
+			alert("X won!");
+		}
+
+// DIAGONAL O LEFT DOWN
+		else if (a === "O" && e === "O" && i ==="O") {
+			alert("O won!");
+		}
+
+// DIAGONAL O UP RIGHT
+		else if (g === "O" && e === "O" && c ==="O") {
+			alert("O won!");
+		}
+
+		else if (turnCounter === 9) {
+			alert("Tie");
+		}
 
 	}
 
