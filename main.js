@@ -19,11 +19,13 @@ $(document).ready(function(){
 		if (turnCounter %2 === 0) {
 			$(this).text("X");
 			$(this).addClass("deny");
+			$(this).toggleClass("bluebackground");
 		} 
 
 		else {
 			$(this).text("O");
 			$(this).addClass("deny");
+			$(this).toggleClass("greenbackground");
 		}
 
 		turnCounter++;
@@ -35,7 +37,7 @@ $(document).ready(function(){
 	$(".reset").click(function(){
 		turnCounter=0;
 
-		$(".button").text("").removeClass("deny");
+		$(".button").text("").removeClass("deny").removeClass("bluebackground").removeClass("greenbackground");
 	});
 
 // RESET SCORE BUTTON
@@ -43,7 +45,7 @@ $(document).ready(function(){
 		xscore = 0;
 		oscore = 0;
 		tiescore = 0;
-		$(".scoreboard").text("");
+		$(".scoreboard").text("").removeClass("redbackground1").removeClass("redbackground2").removeClass("redbackground3");
 	});
 
 	// $(".button").click(function(){
@@ -65,15 +67,15 @@ $(document).ready(function(){
 		console.log("xscore is ", xscore);
 
 		if (xscore === 1) {
-			$(".scoreX1").text("X");
+			$(".scoreX1").text("X").toggleClass("redbackground1");
 		}
 
 		if (xscore === 2) {
-			$(".scoreX2").text("X");
+			$(".scoreX2").text("X").toggleClass("redbackground2");
 		}
 
 		if (xscore === 3) {
-			$(".scoreX3").text("X");
+			$(".scoreX3").text("X").toggleClass("redbackground3");
 		}
 	}
 
@@ -83,15 +85,15 @@ $(document).ready(function(){
 		console.log("oscore is ", oscore);
 
 		if (oscore === 1) {
-			$(".scoreO1").text("O");
+			$(".scoreO1").text("O").toggleClass("redbackground1");
 		}
 
 		if (oscore === 2) {
-			$(".scoreO2").text("O");
+			$(".scoreO2").text("O").toggleClass("redbackground2");
 		}
 
 		if (oscore === 3) {
-			$(".scoreO3").text("O");
+			$(".scoreO3").text("O").toggleClass("redbackground3");
 		}
 	}
 
@@ -101,15 +103,15 @@ $(document).ready(function(){
 		console.log("tiescore is ", tiescore);
 
 		if (tiescore === 1) {
-			$(".scoreTie1").text("cat");
+			$(".scoreTie1").text("cat").toggleClass("redbackground1");
 		}
 
 		if (tiescore === 2) {
-			$(".scoreTie2").text("cat");
+			$(".scoreTie2").text("cat").toggleClass("redbackground2");
 		}
 
 		if (tiescore === 3) {
-			$(".scoreTie3").text("cat");
+			$(".scoreTie3").text("cat").toggleClass("redbackground3");
 		}
 	}
 
