@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Tic Tac Toe MoFo</title>
+		<title>Tic Tac Toe Mo Fo</title>
 		<link rel="stylesheet" type="text/css" href="normalize.css">
 	<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="bootstrap.min.css">
@@ -15,34 +15,48 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-
+		<header>
+		    <div class="row">
+			     <div class="col-xs-12"><p>Tic Tac Toe Mo Fo</p></div>
+			</div>
+		</header>
 	<!-- TIC TAC TOE GAME SECTION BELOW -->
 		<div class="container">
-		    <div class="row">
+		    <div class="row red">
 			     <div class="col-xs-4 button a"></div>
 			     <div class="col-xs-4 button b"></div>
 			     <div class="col-xs-4 button c"></div>
 			</div>
-		    <div class="row">
+		    <div class="row red">
 			     <div class="col-xs-4 button d"></div>
 			     <div class="col-xs-4 button e"></div>
 			     <div class="col-xs-4 button f"></div>
 		    </div>
-		    <div class="row">
+		    <div class="row red">
 			     <div class="col-xs-4 button g"></div>
 			     <div class="col-xs-4 button h"></div>
 			     <div class="col-xs-4 button i"></div>
 		    </div>
 		</div>
 
+<!-- MIDDLE BUTTONS -->
 		<div class="container">
 		    <div class="row">
-			     <div class="col-xs-12 reset">
-			     	<button type="button">Reset!</button>
+			     <div class="col-xs-4 reset middlebuttons">
+			     	<button type="button">Reset <b>Game</b></button>
+			     </div>
+
+			     <div class="col-xs-4 special middlebuttons">
+			     	<button type="button">Special Stuff</button>
+			     </div>
+
+			     <div class="col-xs-4 resetscore middlebuttons">
+			     	<button type="button">Reset <b>Score</b></button>
 			     </div>
 			</div>
 		</div>
 
+<!-- SCOREBOARD -->
 		<div class="container">
 		    <div class="row">
 			     <div class="col-xs-4 scoreboard scoreX1"></div>

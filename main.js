@@ -30,11 +30,20 @@ $(document).ready(function(){
 
 		getWinner();
 	});
-	
+
+// RESET GAME BUTTON
 	$(".reset").click(function(){
 		turnCounter=0;
 
 		$(".button").text("").removeClass("deny");
+	});
+
+// RESET SCORE BUTTON
+	$(".resetscore").click(function(){
+		xscore = 0;
+		oscore = 0;
+		tiescore = 0;
+		$(".scoreboard").text("");
 	});
 
 	// $(".button").click(function(){
@@ -50,7 +59,7 @@ $(document).ready(function(){
 	// 	}
 
 
-///DELETE THIS IS YOU GET THE OTHER VERSION OF THIS CODE TO WORK
+// HOW SCORE OF X IS CALCULATED
 	function getScoreX() {
 		xscore++;
 		console.log("xscore is ", xscore);
@@ -68,6 +77,7 @@ $(document).ready(function(){
 		}
 	}
 
+// HOW SCORE OF O IS CALCULATED
 	function getScoreO() {
 		oscore++;
 		console.log("oscore is ", oscore);
@@ -85,6 +95,7 @@ $(document).ready(function(){
 		}
 	}
 
+// HOW SCORE OF TIE IS CALCULATED 
 	function getScoreTie() {
 		tiescore++;
 		console.log("tiescore is ", tiescore);
