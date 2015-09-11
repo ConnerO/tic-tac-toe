@@ -1,4 +1,5 @@
 var turnCounter = 0;
+var xscore = 0;
 
 $(document).ready(function(){
 
@@ -7,11 +8,6 @@ $(document).ready(function(){
 // onClick add a number to a counter. make variable COUNTER and every time something gets clicked, it adds 1 to it. Divide it by 2, if there is a remainder then it's odd which should equal O, if it's even it's X
 
 // var playerOne = "X" make array that if playerOne is in a1,a2,a3 then alert(PLayer One Wins!)
-
-
-
-
-
 
 	$(".button").click(function(){
 		if ($(this).hasClass("deny")) {
@@ -37,9 +33,47 @@ $(document).ready(function(){
 		turnCounter=0;
 
 		$(".button").text("").removeClass("deny");
-
-
 	});
+
+	// $(".button").click(function(){
+		
+	// 	if (turnCounter %2 === 0) {
+	// 		$(this).text("X");
+	// 		$(this).addClass("deny");
+	// 	} 
+
+	// 	else {
+	// 		$(this).text("O");
+	// 		$(this).addClass("deny");
+	// 	}
+
+
+///DELETE THIS IS YOU GET THE OTHER VERSION OF THIS CODE TO WORK
+	function getScore() {
+		// var boxScoreX = $(".scoreX1").text();
+		// var boxScoreTie = $(".scoreTie1").text();
+		// var boxScoreO = $(".scoreO1").text();
+		xscore++;
+		console.log("xscore is ", xscore);
+		if (xscore === 0) {
+			$(".scoreX1").text();
+		}
+
+		if (xscore === 1) {
+			$(".scoreX1").text("X");
+		}
+
+		if (xscore === 2) {
+			$(".scoreX2").text("X");
+		}
+
+		if (xscore === 3) {
+			$(".scoreX3").text("X");
+		}
+	}
+
+
+
 
 	function getWinner(){
 		var a = $(".a").text();
@@ -55,31 +89,37 @@ $(document).ready(function(){
 // TOP ROW X WINS
 		if (a === "X" && b === "X" && c ==="X") {
 			alert("X won! top row");
+			getScore();
 		}
 
 // MIDDLE ROX X WINS
 		else if (d === "X" && e === "X" && f ==="X") {
 			alert("X won! middle row");
+			getScore();
 		}
 
 // BOTTOM ROW X WINS
 		else if (g === "X" && h === "X" && i ==="X") {
 			alert("X won! bottom row");
+			getScore();
 		}
 
 // LEFT COLUMN X WINS
 		else if (a === "X" && d === "X" && g ==="X") {
 			alert("X won! left column");
+			getScore();
 		}
 
 // MIDDLE COLUMN X WINS
 		else if (b === "X" && e === "X" && h ==="X") {
 			alert("X won! middle column");
+			getScore();
 		}
 
 // RIGHT COLUMN X WINS
 		else if (c === "X" && f === "X" && i ==="X") {
 			alert("X won! right column");
+			getScore();
 		}
 
 

@@ -23,3 +23,7 @@ div {
 .reset {
 	max-width: 100%;
 }
+
+.scoreboard {
+	height: 175px;
+}
