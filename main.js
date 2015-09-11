@@ -3,6 +3,18 @@ var xscore = 0;
 var oscore = 0;
 var tiescore = 0;
 
+function resetButtons() {
+	$(".button").text("").removeClass("deny").removeClass("bluebackground").removeClass("greenbackground");
+	turnCounter =0;
+}
+
+function resetScore() {
+	xscore = 0;
+	oscore = 0;
+	tiescore = 0;
+	$(".scoreboard").text("").removeClass("redbackground1").removeClass("redbackground2").removeClass("redbackground3");
+}
+
 $(document).ready(function(){
 
 
@@ -34,19 +46,14 @@ $(document).ready(function(){
 	});
 
 // RESET GAME BUTTON
-	$(".reset").click(function(){
-		turnCounter=0;
-
-		$(".button").text("").removeClass("deny").removeClass("bluebackground").removeClass("greenbackground");
-	});
+	$(".reset").click(resetButtons);
 
 // RESET SCORE BUTTON
-	$(".resetscore").click(function(){
-		xscore = 0;
-		oscore = 0;
-		tiescore = 0;
-		$(".scoreboard").text("").removeClass("redbackground1").removeClass("redbackground2").removeClass("redbackground3");
-	});
+	$(".resetscore").click(resetScore);
+
+// SPECIAL BUTTON
+
+	$(".special").click();
 
 	// $(".button").click(function(){
 		
@@ -131,112 +138,126 @@ $(document).ready(function(){
 
 // TOP ROW X WINS
 		if (a === "X" && b === "X" && c ==="X") {
-			alert("X won! top row");
+			alert("X WON THE TOP ROW!");
 			getScoreX();
+			resetButtons();
 		}
 
 // MIDDLE ROX X WINS
 		else if (d === "X" && e === "X" && f ==="X") {
-			alert("X won! middle row");
+			alert("X WON THE MIDDLE ROW!");
 			getScoreX();
+			resetButtons();
 		}
 
 // BOTTOM ROW X WINS
 		else if (g === "X" && h === "X" && i ==="X") {
-			alert("X won! bottom row");
+			alert("X WON THE BOTTOM ROW!");
 			getScoreX();
+			resetButtons();
 		}
 
 // LEFT COLUMN X WINS
 		else if (a === "X" && d === "X" && g ==="X") {
-			alert("X won! left column");
+			alert("X WON THE LEFT COLUMN!");
 			getScoreX();
+			resetButtons();
 		}
 
 // MIDDLE COLUMN X WINS
 		else if (b === "X" && e === "X" && h ==="X") {
-			alert("X won! middle column");
+			alert("X WON THE MIDDLE COLUMN!");
 			getScoreX();
+			resetButtons();
 		}
 
 // RIGHT COLUMN X WINS
 		else if (c === "X" && f === "X" && i ==="X") {
-			alert("X won! right column");
+			alert("X WON THE RIGHT COLUMN!");
 			getScoreX();
+			resetButtons();
 		}
 
 // DIAGONAL X LEFT DOWN
 		else if (a === "X" && e === "X" && i ==="X") {
-			alert("X won!");
+			alert("X WON DIAGONALLY STARTING AT THE TOP LEFT SQUARE GOING ALL THE WAY DOWN TO THE BOTTOM RIGHT SQUARE! I couldnt think of a better way to discribe this. Also, they"+"'"+"re technically not squares because they have rounded edges. But hey! At least I know the difference between "+'"you'+"'"+'re"'+'and "your."');
 			getScoreX();
+			resetButtons();
 		}
 
 // DIAGONAL X UP RIGHT
 		else if (g === "X" && e === "X" && c ==="X") {
-			alert("X won!");
+			alert("X WON BY GETTING Xs IN THE BOTTOM LEFT, MIDDLE, AND TOP RIGHT!");
 			getScoreX();
+			resetButtons();
 		}
-
-
-
 
 // TOP ROW O WINS
 		else if (a === "O" && b === "O" && c ==="O") {
-			alert("O won! top row");
+			alert("O WON THE TOP ROW!");
 			getScoreO();
+			resetButtons();
 		}
 
 // MIDDLE ROX O WINS
 		else if (d === "O" && e === "O" && f ==="O") {
-			alert("O won! middle row");
+			alert("O WON THE MIDDLE ROW!");
 			getScoreO();
+			resetButtons();
 		}
 
 // BOTTOM ROW O WINS
 		else if (g === "O" && h === "O" && i ==="O") {
-			alert("O won! bottom row");
+			alert("O WON THE BOTTOM ROW!");
 			getScoreO();
+			resetButtons();
 		}
 
 // LEFT COLUMN O WINS
 		else if (a === "O" && d === "O" && g ==="O") {
-			alert("O won! left column");
+			alert("O WON THE LEFT COLUMN!");
 			getScoreO();
+			resetButtons();
 		}
 
 // MIDDLE COLUMN O WINS
 		else if (b === "O" && e === "O" && h ==="O") {
-			alert("O won! middle column");
+			alert("O WON THE MIDDLE COLUMN!");
 			getScoreO();
+			resetButtons();
 		}
 
 // RIGHT COLUMN O WINS
 		else if (c === "O" && f === "O" && i ==="O") {
-			alert("O won! right column");
+			alert("O WON THE RIGHT COLUMN!");
 			getScoreO();
+			resetButtons();
 		}
 
 // DIAGONAL O LEFT DOWN
 		else if (a === "O" && e === "O" && i ==="O") {
-			alert("O won!");
+			alert("O WON DIAGONALLY IN A 135 DEGREE ANGLE");
 			getScoreO();
+			resetButtons();
 		}
 
 // DIAGONAL O UP RIGHT
 		else if (g === "O" && e === "O" && c ==="O") {
-			alert("O won!");
+			alert("O WON DIAGONALLY IN A 45 DEGREE ANGLE!");
 			getScoreO();
+			resetButtons();
 		}
 
 // TIE GAME
 		else if (turnCounter === 9) {
-			alert("Tie");
+			alert('"Tying is like kissing your sister." -Abraham Lincoln, 1954');
 			getScoreTie();
+			resetButtons();
 		}
 
 	}
 
-
+// ^^^^^^^^^^^^^^^^^^^^THIS IS THE END OF THE CONFETTI CODE^^^^^^^^^^^^^^^^
 
 // 		function cellValue(key) {
 // 		switch(key) {

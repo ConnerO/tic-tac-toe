@@ -1,11 +1,18 @@
 div {
-	font-size:1.5em;
+	font-size:1.75em;
 	text-align: center;
+}
+
+div.container {
+		border: 1px solid orange;
 }
 
 p {
 	font-weight: bold;
 }
+
+
+
 .game .scoreboard {
 	min-width:320px;
 	max-width:520px;
@@ -22,8 +29,9 @@ p {
 .scoreboard {
 	height: 125px;
 	border: 2px solid #ff3333;
-	color: #33ff66;
+	color: #ffffff;
 	text-shadow: -1px 0 10px #000000, -2px 0 10px #888888;
+/*	border-color: -webkit-linear-gradient(left, #ff3300, #cc3333); */
 }
 
 .middlebuttons {
@@ -34,7 +42,7 @@ p {
 }
 
 .deny, .scoreboard {
-	padding: 2%;
+	padding: 1% 0;
 }
 
 button {
@@ -44,10 +52,10 @@ button {
 .button {
 	height: 125px;
 /*	border: 2px solid #3399ff;*/
-	border-radius: 10%;
+	border-radius: 25%;
 	color: #ffcc00;
 	text-shadow: 2px 2px 5px #888888;
-	box-shadow: inset -10px -10px 16px 2px rgba(0,0,0,0.25);
+	box-shadow: inset -10px -10px 40px 2px rgba(0,0,0,0.25)
 }
 
 .button:hover, {
@@ -58,7 +66,7 @@ button {
 /*	color: #fff;*/
 /*	border: 2px solid #3399ff;*/
 	text-shadow: -2px -2px 5px #888888;
-	box-shadow: inset 10px 10px 16px 2px rgba(0,0,0,0.25);
+	box-shadow: inset 10px 10px 40px 2px rgba(0,0,0,0.25);
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
 }
