@@ -1,5 +1,7 @@
 var turnCounter = 0;
 var xscore = 0;
+var oscore = 0;
+var tiescore = 0;
 
 $(document).ready(function(){
 
@@ -49,15 +51,9 @@ $(document).ready(function(){
 
 
 ///DELETE THIS IS YOU GET THE OTHER VERSION OF THIS CODE TO WORK
-	function getScore() {
-		// var boxScoreX = $(".scoreX1").text();
-		// var boxScoreTie = $(".scoreTie1").text();
-		// var boxScoreO = $(".scoreO1").text();
+	function getScoreX() {
 		xscore++;
 		console.log("xscore is ", xscore);
-		if (xscore === 0) {
-			$(".scoreX1").text();
-		}
 
 		if (xscore === 1) {
 			$(".scoreX1").text("X");
@@ -69,6 +65,40 @@ $(document).ready(function(){
 
 		if (xscore === 3) {
 			$(".scoreX3").text("X");
+		}
+	}
+
+	function getScoreO() {
+		oscore++;
+		console.log("oscore is ", oscore);
+
+		if (oscore === 1) {
+			$(".scoreO1").text("O");
+		}
+
+		if (oscore === 2) {
+			$(".scoreO2").text("O");
+		}
+
+		if (oscore === 3) {
+			$(".scoreO3").text("O");
+		}
+	}
+
+	function getScoreTie() {
+		tiescore++;
+		console.log("tiescore is ", tiescore);
+
+		if (tiescore === 1) {
+			$(".scoreTie1").text("cat");
+		}
+
+		if (tiescore === 2) {
+			$(".scoreTie2").text("cat");
+		}
+
+		if (tiescore === 3) {
+			$(".scoreTie3").text("cat");
 		}
 	}
 
@@ -89,37 +119,49 @@ $(document).ready(function(){
 // TOP ROW X WINS
 		if (a === "X" && b === "X" && c ==="X") {
 			alert("X won! top row");
-			getScore();
+			getScoreX();
 		}
 
 // MIDDLE ROX X WINS
 		else if (d === "X" && e === "X" && f ==="X") {
 			alert("X won! middle row");
-			getScore();
+			getScoreX();
 		}
 
 // BOTTOM ROW X WINS
 		else if (g === "X" && h === "X" && i ==="X") {
 			alert("X won! bottom row");
-			getScore();
+			getScoreX();
 		}
 
 // LEFT COLUMN X WINS
 		else if (a === "X" && d === "X" && g ==="X") {
 			alert("X won! left column");
-			getScore();
+			getScoreX();
 		}
 
 // MIDDLE COLUMN X WINS
 		else if (b === "X" && e === "X" && h ==="X") {
 			alert("X won! middle column");
-			getScore();
+			getScoreX();
 		}
 
 // RIGHT COLUMN X WINS
 		else if (c === "X" && f === "X" && i ==="X") {
 			alert("X won! right column");
-			getScore();
+			getScoreX();
+		}
+
+// DIAGONAL X LEFT DOWN
+		else if (a === "X" && e === "X" && i ==="X") {
+			alert("X won!");
+			getScoreX();
+		}
+
+// DIAGONAL X UP RIGHT
+		else if (g === "X" && e === "X" && c ==="X") {
+			alert("X won!");
+			getScoreX();
 		}
 
 
@@ -128,55 +170,55 @@ $(document).ready(function(){
 // TOP ROW O WINS
 		else if (a === "O" && b === "O" && c ==="O") {
 			alert("O won! top row");
+			getScoreO();
 		}
 
 // MIDDLE ROX O WINS
 		else if (d === "O" && e === "O" && f ==="O") {
 			alert("O won! middle row");
+			getScoreO();
 		}
 
 // BOTTOM ROW O WINS
 		else if (g === "O" && h === "O" && i ==="O") {
 			alert("O won! bottom row");
+			getScoreO();
 		}
 
 // LEFT COLUMN O WINS
 		else if (a === "O" && d === "O" && g ==="O") {
 			alert("O won! left column");
+			getScoreO();
 		}
 
 // MIDDLE COLUMN O WINS
 		else if (b === "O" && e === "O" && h ==="O") {
 			alert("O won! middle column");
+			getScoreO();
 		}
 
 // RIGHT COLUMN O WINS
 		else if (c === "O" && f === "O" && i ==="O") {
 			alert("O won! right column");
-		}
-
-// DIAGONAL X LEFT DOWN
-		else if (a === "X" && e === "X" && i ==="X") {
-			alert("X won!");
-		}
-
-// DIAGONAL X UP RIGHT
-		else if (g === "X" && e === "X" && c ==="X") {
-			alert("X won!");
+			getScoreO();
 		}
 
 // DIAGONAL O LEFT DOWN
 		else if (a === "O" && e === "O" && i ==="O") {
 			alert("O won!");
+			getScoreO();
 		}
 
 // DIAGONAL O UP RIGHT
 		else if (g === "O" && e === "O" && c ==="O") {
 			alert("O won!");
+			getScoreO();
 		}
 
+// TIE GAME
 		else if (turnCounter === 9) {
 			alert("Tie");
+			getScoreTie();
 		}
 
 	}
